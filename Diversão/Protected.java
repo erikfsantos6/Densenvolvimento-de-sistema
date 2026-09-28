@@ -1,0 +1,6 @@
+/**
+ * Protected
+ */
+public class Protected {
+
+}
