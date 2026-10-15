@@ -1,39 +1,16 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Ex02 {
     public static void main(String[] args) {
-        
-        Scanner sc = new Scanner (System.in);
-        ArrayList<Integer> numeros = new ArrayList<>();
+        int [] numeros={10,20,30};
 
-        numeros.add(20);
-        numeros.add(30);
-        numeros.add(40);
+        try{
+            System.out.println(numeros[5]);
 
-        System.out.println("Números cadastrados");
-        for (Integer numero : numeros) {
-            System.out.println(numeros);
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Erro índice fora do limite");
         }
-
-        System.out.println("\n Digite o número que deseja remover: ");
-        int numeroRemover = sc.nextInt();
-
-        numeros.remove(Integer.valueOf(numeroRemover));
-        System.out.println("Após remover");
-
-        for (Integer numero : numeros) {
-            System.out.println(numero);
-        }
-
-
-
-
-
-
-
-        sc.close();
-
-
+        finally{
+            System.out.println("Fim do programa");
+        }            
     }
+    
 }
